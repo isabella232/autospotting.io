@@ -1,0 +1,6 @@
+weight: 1
+name: "Automated"
+icon: "fa fa-desktop"
+
+description: "Automatically places spot bids with bit prices and instance types
+determined dynamically from the configuration of your running instances in each group."

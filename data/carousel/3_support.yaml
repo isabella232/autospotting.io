@@ -1,0 +1,8 @@
+weight: 3
+title: "Supported"
+description: >
+  <ul class="list-style-none">
+    <li>Vibrant open-source community</li>
+    <li>Stable binaries tested and supported by the main author</li>
+  </ul>
+image: "img/carousel/support.jpg"

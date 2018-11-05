@@ -1,0 +1,9 @@
+weight: 2
+title: "Safe for Production"
+description: >
+  <ul class="list-style-none">
+    <li>Automated fail-over to on-demand</li>
+    <li>Can keep some on-demand running</li>
+    <li>Gradual instance replacement</li>
+  </ul>
+image: "img/carousel/safe.png"

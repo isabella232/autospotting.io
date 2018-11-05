@@ -1,0 +1,9 @@
+weight: 5
+title: "Low cost overhead"
+description: >
+  <ul class="list-style-none">
+    <li>Negligible runtime costs</li>
+    <li>Open Source code base</li>
+    <li>Inexpensive easy to install supported binaries available</li>
+  </ul>
+image: "img/carousel/lowest-cost.jpg"
