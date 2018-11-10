@@ -1,0 +1,10 @@
+weight: 8
+title: "Compatible"
+description: >
+  <ul class="list-style-none">
+     <li></li>
+     <li>Out of the box support for most AWS services that expose or integrate
+     with AutoScaling groups</li>
+     <li>Easy to automate from CI/CD scripts</li>
+   </ul>
+image: "img/carousel/puzzle.jpg"

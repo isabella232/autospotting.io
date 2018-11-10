@@ -154,8 +154,19 @@ paginate = 10
     # at 'exampleSite/data/testimonials'.
     # For more informtion take a look at the README.
     title = "Testimonials"
-    subtitle = '''We have many users and we always like to hear from them.
-        Have a look what they said about us.'''
+    subtitle = '''We have hundreds of happy users: from individuals
+        saving a few bucks a month, to start-ups of all stages and sizes and even
+        well-known large companies that save $10000s monthly.
+        We always love to hear about their success stories, here's what they said
+        about AutoSpotting.'''
+
+[params.clients]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Major Users"
+    subtitle = ""
 
 [params.see_more]
     enable = true
@@ -171,13 +182,7 @@ paginate = 10
     link_url = "https://github.com/cristim/autospotting"
     link_text = "Check us out on GitHub"
 
-[params.clients]
-    enable = true
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Major Users"
-    subtitle = ""
+
 
 [params.recent_posts]
     enable = true

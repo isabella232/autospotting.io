@@ -5,5 +5,7 @@ description: >
     <li>Automated fail-over to on-demand</li>
     <li>Can keep some on-demand running</li>
     <li>Gradual instance replacement</li>
+    <li>Automated traffic draining for instances behind ELBs</li>
+    <li>Supports termination lifecycle hooks</li>
   </ul>
 image: "img/carousel/safe.png"
