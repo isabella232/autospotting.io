@@ -1,0 +1,35 @@
+/* your styles go here */
+
+.box-image-text .image {
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.box-simple {
+  min-height: 230px;
+}
+
+/* Align the Major User logos */
+section.bar.background-gray.no-mb .owl-item {
+  height: 130px;
+  display: flex;
+  align-items: center;
+}
+section.bar.background-gray.no-mb .owl-item img {
+  width: 100%;
+}
+
+/* Larger testimonial images */
+.testimonials .item .testimonial .name-picture img {
+  float: right;
+  width: 70px;
+  border-radius: 35px;
+  margin-left: 10px;
+}
+
+/* Move the carousel navigation below the page indicators */
+.owl-carousel .owl-controls .owl-buttons,
+.owl-theme .owl-controls .owl-buttons {
+  position: relative;
+  align-self: center;
+}

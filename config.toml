@@ -156,9 +156,8 @@ paginate = 10
     title = "Testimonials"
     subtitle = '''We have hundreds of happy users: from individuals
         saving a few bucks a month, to start-ups of all stages and sizes and even
-        well-known large companies that save $10000s monthly.
-        We always love to hear about their success stories, here's what they said
-        about AutoSpotting.'''
+        well-known large companies that save $10000s monthly, and we always love
+        to hear about their success stories.'''
 
 [params.clients]
     enable = true
@@ -171,18 +170,18 @@ paginate = 10
 [params.see_more]
     enable = true
     icon = "fa fa-file-code-o"
-    title = "Do you want to see more?"
+    title = "Curious for more?"
 
     subtitle = '''
         You can see more detailed and up-to-date information about the project
-        internals, the installation instructions for bleeding edge builds as
-        well as and how to get access to stable and supported binaries.
+        and get the installation instructions if you visit the links below.
         '''
 
-    link_url = "https://github.com/cristim/autospotting"
-    link_text = "Check us out on GitHub"
+    link1_url = "https://github.com/cristim/autospotting"
+    link1_text = "Github project page"
 
-
+    link2_url = "https://www.patreon.com/cristim"
+    link2_text = "Install now"
 
 [params.recent_posts]
     enable = true
