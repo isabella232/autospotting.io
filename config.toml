@@ -94,7 +94,7 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
 #   email = "your@email.com"
 
-    about_us = "<p>An easy to use tool for automating the use of EC2 spot instances in existing on-demand AutoScaling groups.</p>"
+    about_us = "<p>AutoSpotting - An easy to use tool for automating the use of EC2 spot instances in existing on-demand AutoScaling groups.</p>"
     copyright = "Copyright (c) 2016 - 2018, Cristian Măgherușan-Stanciu; all rights reserved."
 
     # Format dates with Go's time formatting
