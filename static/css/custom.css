@@ -33,3 +33,79 @@ section.bar.background-gray.no-mb .owl-item img {
   position: relative;
   align-self: center;
 }
+
+
+/* Pricing section */
+.heading.text-center h2 {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.single-price-plan {
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  margin-bottom: 30px;
+  min-height: 438px;
+}
+
+.package-plan h5 {
+  text-align: center;
+}
+
+ul.fa-ul li {
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.package-plan {
+  padding: 15px 0;
+  border-radius: 30px 30px 0 0;
+}
+.package-plan h5 {
+  font-size: 24px;
+  padding-top: 5px;
+}
+
+.price.d-flex.justify-content-center span {
+  font-size: 24px;
+}
+.price.d-flex.justify-content-center h4 {
+  font-size: 48px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.package-description p{
+  border-top: 1px solid #ebebeb;
+  line-height: 1;
+  padding: 15px 0;
+  display: flex;
+}
+.plan-button a {
+  padding: 10px 0;
+  color: #1b1e21;
+  font-weight: 500;
+  display: block;
+  border: none;
+}
+
+.plan-button a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background: #138496;
+}
+/* .package-plan2 {
+  padding: 40px 0;
+}
+.package-plan2 h5 {
+  font-size: 24px;
+} */
+a.btn.btn-info {
+  background-color: transparent;
+  border-radius: 0px;
+}
+.single-price-plan:hover .plan-button a {
+  background: #138496;
+  color: #fff;
+}

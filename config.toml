@@ -167,6 +167,13 @@ paginate = 10
     title = "Major Users"
     subtitle = ""
 
+[params.pricing]
+    enable = true
+    title = "Pricing Plans"
+    get_in_touch_text = "Do you have more than 5 AWS accounts?"
+    get_in_touch = "Let's talk!"
+    get_in_touch_url = "https://gitter.im/cristim"
+
 [params.see_more]
     enable = true
     icon = "fa fa-file-code-o"
@@ -174,14 +181,11 @@ paginate = 10
 
     subtitle = '''
         You can see more detailed and up-to-date information about the project
-        and get the installation instructions if you visit the links below.
+        and get the installation instructions if you visit the link below.
         '''
 
-    link1_url = "https://github.com/cristim/autospotting"
-    link1_text = "Github project page"
-
-    link2_url = "https://www.patreon.com/cristim"
-    link2_text = "Install now"
+    link_url = "https://github.com/cristim/autospotting"
+    link_text = "Github project page"
 
 [params.recent_posts]
     enable = true

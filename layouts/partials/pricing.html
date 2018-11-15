@@ -1,0 +1,55 @@
+{{ if isset .Site.Params "pricing" }}
+{{ if .Site.Params.pricing.enable }}
+{{ if gt (len .Site.Data.pricing) 0 }}
+
+    <section class="pricing-plane-area section_padding_100_70 clearfix" id="pricing">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Heading Text  -->
+            <div class="heading text-center">
+              <h2>{{ .Site.Params.pricing.title }}</h2>
+              <div class="line-shape"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          {{ range .Site.Data.pricing }}
+          <div class="col-12 col-md-4 col-lg-4">
+            <div class="single-price-plan">
+              <div class="package-plan">
+                <h5>{{ .title }}</h5>
+                <div class="price d-flex justify-content-center">
+                  <h5>{{ .price }}</h5>
+                </div>
+              </div>
+              <div class="package-description">
+                <hr>
+                <ul class="fa-ul">
+                  {{ range .features }}
+                  <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </div>
+              <div class="plan-button">
+                <a href={{ .button_url | absURL }}
+                  class="btn btn-info"
+                  role="button">{{.button}}</a>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+
+        <p class="text-center">
+          {{ .Site.Params.pricing.get_in_touch_text | markdownify }}
+        </p>
+         <p class="btn btn-template-main center">
+                <a href={{ .Site.Params.pricing.get_in_touch_url | absURL }}
+                  role="button">{{.Site.Params.pricing.get_in_touch}}</a>
+              </p>
+      </div>
+    </section>
+{{ end }}
+{{ end }}
+{{ end }}
