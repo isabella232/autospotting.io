@@ -112,3 +112,10 @@ a.btn.btn-info {
   left: 0;
   width: 100%;
 }
+
+.btn-template-main {
+  color: #38a7bb;
+  background-color: #ffffff;
+  border-color: #38a7bb;
+  margin: 0 auto;
+}
