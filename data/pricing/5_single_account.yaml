@@ -1,13 +1,12 @@
 title: Single AWS Account
 price: $40 monthly
 features:
-  - Stable code
-  - Pre-built from stable commit
+  - Pre-built from tested code
   - Hosted and available for you to install
   - Installable in minutes
-  - Tested and confirmed to work well
   - Licensed for an entire AWS account
   - Enterprise Support
+  - 30 days money back guarantee
 
-button: Get access on Patreon
+button: Sign up
 button_url: https://patreon.com/join/cristim

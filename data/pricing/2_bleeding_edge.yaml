@@ -1,12 +1,12 @@
 title: Bleeding Edge
 price: $3/AWS account monthly
 features:
-  - Trunk code
-  - Pre-built from trunk
+  - Pre-built from latest trunk code
   - Hosted and available for you to install
   - Installable in minutes
   - Test it yourself
-  - Community Support Only
+  - Community support only
+  - 30 days money back guarantee
 
-button: Get access on Patreon
+button: Sign up
 button_url: https://patreon.com/join/cristim
