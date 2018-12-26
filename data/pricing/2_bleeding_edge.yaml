@@ -1,12 +1,12 @@
-title: Bleeding Edge
-price: $3/AWS account monthly
+title: Evaluation
+price: FREE for 14 days
 features:
   - Pre-built from latest trunk code
   - Hosted and available for you to install
   - Installable in minutes
   - Test it yourself
-  - Community support only
-  - 30 days money back guarantee
+  - Supported if you report issues on Github
+  - Can be extended indefinitely by purchasing a subscription
 
-button: Sign up
-button_url: https://patreon.com/join/cristim
+button: Install Now
+button_url: https://bit.ly/AutoSpotting
