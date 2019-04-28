@@ -1,7 +1,7 @@
 all: build upload
 
 build:
-	hugo
+	hugo -DEF
 
 upload:
 	aws s3 sync public/ s3://autospotting.org/
@@ -9,4 +9,4 @@ upload:
 
 local:
 	chromium-browser http://localhost:1313/
-	hugo server
+	hugo server -DEF
