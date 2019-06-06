@@ -73,7 +73,7 @@ to surviving machines in the event of spot instance terminations on some of the
 availability zones.
 
 One could generate a lot of savings if somehow could protect against these
-unexpected terminations, like by quicly switching to another instance type or
+unexpected terminations, like by quickly switching to another instance type or
 even falling back to on-demand instances for relatively brief periods of time.
 
 Autospotting is implementing exactly this kind of automation of switching
