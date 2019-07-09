@@ -89,8 +89,16 @@ be automated against those APIs.
 AutoSpotting is a tool implementing such automation against the AWS APIs.
 
 It monitors some of your AutoScaling groups where it was enabled and it
-continuously replaces any on-demand instances found in those groups with
-compatible, idenically configured spot instances.
+continuously replaces any on-demand instances found in those groups (it can also
+keep some of them running) with compatible and identically configured spot
+instances.
+
+Alternatively you can also run it in `opt-out` mode to act on all the groups
+from your AWS account, except for some it was blacklisted for. Some large
+companies are using it in such a configuration even across hundreds of AWS
+accounts to ensure the majority of their infrastructure to run on cost-effective
+spot instances. If you are also considering such a rollout feel free to get in
+touch on [gitter](https://gitter.im/cristim).
 
 ## How do I install it?
 
@@ -99,9 +107,10 @@ within a couple of minutes and just needs a few clicks in the AWS console or a
 single execution of awscli from the command-line.
 
 Alternatively, there is also a community-supported Terraform stack which works
-similarly.
+similarly, a Docker container image you can run anywhere, and even configuration
+on how to run it on Kubernetes as a cronjob.
 
-You can see the Getting started guide on Github for more information on both
+You can see the Getting started guide on Github for more information on all these
 installation methods, as well as the initial setup procedure.
 
 ## In which region should I install it?
@@ -139,13 +148,22 @@ any other values.
 
 ## How about the software costs?
 
-The software itself is free and open source so there is no monthly subscription
-fee if you build and deploy the open source code straight from trunk, but we
-also have more convenient to use and better supported prebuilt binaries that
-would cost you a small monthly fee and would also support further development
+The software itself is free and open source so there it's entirely free if 
+you build the open source code straight from trunk, host it on your own
+infrastructure and test it all yourself.
+
+But as building it and setting it all up may take some time and effort,
+we also have some convenient to use evaluation binaries built straight from
+trunk. These are free to use, can be installed in minutes but are restricted
+to up to $1000 monthly savings and may occasionally be broken or have
+some immature/experimental features that haven't been yet tested thoroughly.
+
+If you don't want to take any chances or spend time testing the trunk builds
+yourself, we also have supported prebuilt binaries that have been thoroughly
+tested. These cost a small monthly fee but also support further development
 of the software.
 
-You have the following options:
+You therefore have the following options:
 
 ### Open source
 
@@ -155,8 +173,15 @@ You have the following options:
 - users can freely fork and customize the code, but these forks may be hard
   to maintain on the long term if they diverge consistently from mainline.
   Do yourself a favor and at least try to upstream your local changes.
-- limited, best-effort community support, even less so if you run a custom
-  fork.
+- limited, best-effort community support, and no support whatsoever if you
+  run a custom fork with private changes.
+- the AutoSpotting name is also a registered trademark covering only the 
+  use in relation to the official binaries, the source code from the mainline
+  git repository and its public forks made in the process of contributing code
+  to this software. If you run custom binaries that were not created in order
+  to contribute to the development effort, you must rename all occurences of
+  "AutoSpotting" with something else in the code, infrastructure/configuration
+  code and generated build artifacts. 
 
 ### Bleeding edge proprietary binaries
 
@@ -164,32 +189,35 @@ You have the following options:
   commit.
 - They will save you the time needed to build the source code yourself from
   trunk, upload and host it on your own infrastructure.
-- Anyone can use them indefinitely on any number of AWS accounts for a small
-  monthly fee of $3 per AWS account. You will be given the installation
-  instructions after paying this on [Patreon](https://www.patreon.com/join/cristim).
+- Anyone can use them indefinitely on any number of AWS accounts for free.
+- They are restricted to $1000 savings for each user/company. This limit is only
+  enforced within a given AWS account, but you will infringe the license terms
+  if you achieve this across multiple AWS accounts.   
 - These builds may sometimes be broken and barely tested. You will need to test
   the software yourself to make sure it works well from you.
-- Limited, best-effort community support.
+- Limited, best-effort community support, and only if you can reproduce the
+  problem with the latest nightly build.
 
 ### Stable Proprietary binaries
 
 - Carefully selected binaries that were tested and confirmed to work well, so
   you don't need to test them yourself.
-- Come with installation help, long term enterprise support and
-  notifications when a newer stable version is available.
-- Licensed in multiple inexpensive pricing tiers, depending on the size of your
-  infrastructure, payable on a monthly basis through
+- Come with installation help, long term enterprise support and notifications
+  over a private channel when a newer stable version is available.
+- Unlimited savings, but licensed in multiple inexpensive pricing tiers,
+  on a monthly subscription basis depending on the size of your infrastructure
+- payable on a monthly basis through
   [Patreon](https://www.patreon.com/join/cristim). If your infrastructure
   doesn't match those tiers, please feel free to get in touch so we can give you
   a custom offer.
 
 ### Exception for contributors
 
-- Code contributors, people contributing testimonials or blogging about the project
-  can use the stable binaries free of charge on any number of AWS accounts, for
-  a year after their latest contribution.
-- You will need to get in touch and prove that you qualify for this, and will be
-  given some special installation instructions.
+- Code contributors, people contributing testimonials or blogging about the
+  project can use the stable binaries free of charge on any number of AWS accounts,
+  for a year after their latest contribution to the project.
+- You will need to get in touch on gitter and prove that you qualify for this,
+  and will be given some special installation instructions.
 - These don't include the enterprise support, but the limited, best-effort
   community support of the bleeding edge binaries.
 
@@ -201,10 +229,11 @@ The entire configuration is based on tags applied on your AutoScaling groups.
 By default it runs in `opt-in` mode, so it will only take action against groups
 that have the `spot-enabled` tag set to `true`, across all the enabled regions.
 
-When the stack is installed in `opt-out` mode, it will run against all groups
+When configured to run in `opt-out` mode, it will run against all groups
 except for those tagged with the `spot-enabled` tag set to `false`.
 
-Note: the key and value of the `spot-enabled` tag is configurable in both modes.
+Note: the keys and values of the tags, are configurable in both modes, and multiple
+tags can be used
 
 ## What if I have groups in multiple AWS regions?
 
@@ -214,20 +243,16 @@ to all regions unless configured otherwise at installation time.
 The region selection can be changed later by updating the CloudFormation or
 Terraform stack you used to install it.
 
-Note: your license may sometimes onlty cover a subset of the regions. This is
-not enfirced in the software, but please pay attention in order not to violate
+Note: your license may sometimes only cover a subset of the regions. This is
+not enforced in the software, but please pay attention in order not to violate
 the license terms.
 
-## Will it replace all my on-demand instances wth spot instances?
+## Will it replace all my on-demand instances with spot instances?
 
 Yes, that's the default behavior (we find it quite safe), but for your peace of
 mind this is configurable, as you can see below.
 
 ## Can I keep some on-demand instances running just in case?
-
-First, of all don't panic! AutoSpotting will ignore all your groups by default,
-unless configured otherwise using tags for every single group you want it to
-manage.
 
 For your peace of mind, AutoSpotting can be configured to keep some on-demand
 instances running in each of the enabled groups, if so configured.
@@ -236,7 +261,7 @@ On the enabled groups it will by default replace all on-demand instances with
 spot, unless configured otherwise in the CloudFormation stack parameters. This
 global setting can be overridden on a per-group level.
 
-You can set an absolute number or a percentage of the total capacity, also using
+You can set an absolute number or a percentage of the total capacity, using
 tags set on each group.
 
 For more information about these tags, please refer to the Getting Started
@@ -247,7 +272,8 @@ guide.
 The launched spot instances can be of different type than your initial
 instances, unless configured otherwise, but always at least as large as the
 initial ones. You can also constrain it to the same type or a list of types,
-also using some optional tags.
+also using the main configuration or some optional tag overrides on a
+per-group level.
 
 By large it means the launched spot instances have at least as much memory, disk
 volumes(both size and their total number), CPU and GPU cores, EBS optimization,
@@ -261,32 +287,27 @@ compared, taking the EBS optimization surcharge into account.
 Often the initial instance type, or the same size but from a different
 generation, will be the cheapest so it is quite likely that you will get at
 least some instances from the original instance type, but it can also happen
-that you get much beefier spot instances.
-
-The algorithm will also consider your original instances in case they are not
-available on the spot market, such as if you originally have burstable
-instances. For example it was seen to replace t2.medium on-demand instances with
-m4.large spot instances.
+that you get larger spot instances.
 
 ## How is the spot instance replacement working?
 
-AutoSpotting will eventually run against your enabled group and notice that
-on-demand instances exist.
+AutoSpotting will eventually run against your enabled group and notice that more
+than configured on-demand instances are running there.
 
 It will randomly pick an on-demand instance and initiate a replacement, by
 launching a compatible spot instance chosen to be the cheapest available at that
 time in the same availability zone as the on-demand instance selected for
 replacement. The spot instance is configured identically to the original
-instances, sharing the security groups, SSH key, EBS block device mappings, EBS
+instance, sharing the security groups, SSH key, EBS block device mappings, EBS
 optimization flag, etc. This information is taken mainly from the group's launch
-configuration, which is kept unchanged and would still launch on-demand
+configuration, which is otherwise kept unchanged and would still launch on-demand
 instances if needed.
 
-The spot bid price is currently set to the hourly price of the original
-on-demand instance type, but this is subject to change in the future once we
-implement more bidding strategies.
+The spot bid price is by default set to the hourly price of the original
+on-demand instance type, but we have an aggressive bidding strategy that can set
+a price close to the current spot price, in order to avoid significant increases.
 
-The spot instance request will be tagged with the name of the AutoScaling group
+The new spot instance will be tagged with the name of the AutoScaling group
 for which it was launched, and the algorithm waits for the spot instance to be
 launched. Once the spot instance resource was launched and became available
 enough for receiving API calls, the instance is tagged to the same tags set on
@@ -300,37 +321,38 @@ currently considers the grace period interval set on the group and compares it
 with the instance's uptime.
 
 If the spot instance is past its grace period, AutoSpotting will attach it to
-the group and immediately detach and terminate an on-demand instance from the
+the group and immediately detaches and terminates an on-demand instance from the
 same availability zone. Note that if draining connection is configured on ELB
 then Auto Scaling waits for in-flight requests to complete before detaching
 the instance. The terminated on-demand instance is not necessarily the same used
 initially, just in case that may have been terminated by some scaling operations
-or for failing health checks.
+or for failing health checks. But nevertheless, it will be picked from the same
+Availability Zone in order to avoid rebalancing actions.
 
 ## What happens in the event of spot instance terminations?
 
-Since AutoSpotting will run by default only every 5 minutes, nothing will happen
-immediately, unless you configure your spot instances to take notice of the two
-minute termination notification.
+Recent versions of AutoSpotting detect and process the termination notification
+events.
 
-The notification is only visible from within the instance being terminated,
-which must periodically query a certain metadata endpoint, so you can only do it
-by running some additional code on the instance, and AutoSpotting can't directly
-see this notification.
+The behavior in this case depends on your group's configuration. If you use a 
+termination Lifecycle Hook, the spot instance will be terminated immediately by
+AutoSpotting, which will trigger the immediate execution of the Lifecycle Hook.
+There you can take actions such as pushing log files to S3, draining ECS cluster
+tasks, etc. and hopefully manage to drain it completely before it's forcefully
+terminated by the spot market.
 
-There are tools(or even simple bash scripts) which continuously poll the
-instance metadata and detect the notification. Once detected, they can take some
-draining action by running custom scripts. You can do things like removing the
-instance from your load balancer, pushing log files to S3, draining ECS cluster
-tasks, etc. and hopefully manage to drain it completely before it's terminated.
+If the group has no termination Lifecycle Hook configured, the instance will be
+detached from the group and left running until the spot market will eventuallly
+terminate it. This will trigger its autmatic removal of the instance from the
+load balancer.
 
 Once the instance was terminated, your AutoScaling group's health checks will
-eventually fail, and the group will handle this as any instance failure, by
-launching a new on-demand instance in the same availability zone, as initially
-configured on the group.
+eventually fail, and the group will handle this as any instance failure by
+launching a new on-demand instance likely in the same availability zone as
+initially configured on the group.
 
 That on-demand instance will be replaced later on by AutoSpotting using the
-normal replacement process which can be seen above.
+normal replacement process described above.
 
 ## What bidding price does AutoSpotting use?
 
@@ -353,28 +375,36 @@ long-running instances, and it is trying to look and feel as close as possible
 as a native AWS service. Ideally this is how the AutoScaling spot integration
 should have been implemented by AWS in the first place.
 
+It's also meant to be rolled out at scale, such as across entire AWS
+organizations, where it can sometimes be executed in opt-out mode, converting
+the entire fleet to spot instances.
+
 Once installed and set up, it hopefully becomes invisible, both from the
 configuration management perspective but also from the incurred runtime costs,
-and security risks which should be negligible.
+and security perspective.
 
-The configuration should be minimalist and everything should just work without
-much tweaking. You're not expected to need to determine which instance types are
-as good as your initial ones, which instance type is the cheapest in a given
-availability zone, and so on. Everything should be determined based on the
-original instance type using publicly available information and querying the
-current spot prices in real time. Your main job is to make sure you configure a
-proper draining action suitable for your application and environment.
+The configuration is designed to be minimalist and everything should just work
+without much tweaking. You're not expected to need to determine which instance
+types are as good as your initial ones, which instance type is the cheapest in
+a given availability zone, which price to bid and so on. Everything should be
+determined based on the original instance type using publicly available
+information and querying the current spot prices in real time. Your main job
+is to make sure your application can sustain instance failures, and to
+configure a draining action suitable for your application and environment if
+you do need one.
 
 It also tries as much as possible to avoid locking you in, so if you later
 decide that spot instances aren't for you and you want to disable it, you can
 easily do it with just a few clicks or commands, and immediately revert your
 environment to your initial on-demand setup, unlike most other solutions where
-the back-and-forth migration effort may become quite significant.
+the back-and-forth migration effort may become quite significant. You can even
+enable/disable it on a one-off or scheduled basis, if you have such a use case.
 
 From the security perspective, it was carefully configured to use the minimum
 set of IAM permissions needed to get its job done, nothing more, nothing less.
 There is no cross-accounting IAM role, everything runs from within your AWS
-account.
+account and no information about your infrastructure ever leaves your AWS
+account unless you maybe ship its logs yourself to a CloudTrail S3 bucket.
 
 ## What is the use case in which AutoSpotting makes most sense to use?
 
@@ -402,7 +432,7 @@ the draining action.
 
 ## What are some use cases in which it's not a good fit and what to use instead?
 
-Anything that doesn't really match the above cases.
+Anything that doesn't really match the above cases:
 
 ### Groups that have no redundancy
 
@@ -435,12 +465,12 @@ and the volume can be successfully attached to your spot instance. The spot
 instance's software configuration may need to be changed in order to accommodate
 this EBS volume.
 
-## How does AutoSpotting compare to the the AutoScaling spot integration?
+## How does AutoSpotting compare to the the legacy AutoScaling spot integration?
 
 Or why would I use AutoSpotting instead of the normal AutoScaling groups which set
-a spot price in the launch configuration?
+a spot price in the launch configuration or the mixed groups?
 
-The answer is it's more reliable than the normal spot AutoScaling groups,
+The answer is it's more reliable than the legacy spot AutoScaling groups,
 because they are using a fixed instance type so they ignore any better priced
 spot instance types, and they don't fallback to on-demand instances when the
 market price is higher than the bid price across all the availability zones, so
@@ -455,11 +485,30 @@ on-demand instances are launched and configured, but the group soon recovers all
 its lost instances.
 
 On top of that, Autospotting allows you to configure the number or percentage of
-spot instance that you tolerate in your ASG, while the integration of AWS would
-try to replace them all, causing potential downtime if they were to disapear at
-the same time.
+spot instance that you tolerate in your ASG, while the legacy integration of AWS
+would try to replace them all, causing potential downtime if they were to terminate
+at the same time.
 
-## How does AutoSpotting compare to the the spot fleet AWS offering?
+## How does AutoSpotting compare to the AutoScaling mixed groups?
+
+AutoSpotting is much like the relatively new mixed groups feature, but it still has
+some unique capabilities:
+
+- you can enable/disable it at will, even on a schedule basis
+- you can roll it out across your entire fleet in opt-out mode, without any
+  configuration changes, in particular you don't need to convert your groups to
+  LaunchTemplates
+- out of the box support for ElasticBeanstalk environments
+- out of the box handling of spot instance termination notifications
+- flexible/automated instance type selection for spot instances
+
+To be fair it also does have a few drawbacks (some currently being worked on)
+- the increased churn caused by the instance replacement process
+- lack of support for launch lifecycle hooks
+- no support for China and GovCloud
+- some runtime costs and potential software/maintenance costs
+
+## How does AutoSpotting compare to the spot fleet AWS offering?
 
 Or why would I use AutoSpotting instead of the spot fleets? And when would I be
 better off running spot fleets?
@@ -532,7 +581,7 @@ Many of these commercial offerings have in common a number of things:
   need to integrate it with other services you can even do it yourself since
   it's open source.
 - they're all pay-as-you-go solutions charging a percentage of the savings. For
-  example spotinst charges 25% or often as much as you will pay AWS for spot
+  example spotinst charges 20% or often as much as you will pay AWS for spot
   instances, which I find obscene for how simple this functionality can be built
   in AutoSpotting. They justify this by nice looking dashboards and buzz words
   such as Machine Learning, but although that's nice to have, it's not really
@@ -550,7 +599,7 @@ Many of these commercial offerings have in common a number of things:
 
 ## Does AutoSpotting continuously search and use cheaper spot instances?
 
-If I attach autospotting to a auto scaling group that is 100% spot instances,
+If I attach autospotting to an AutoScaling group that is 100% spot instances,
 will it autobid for cheaper compatible ones when found later on?
 
 The answer is No. The current logic won't terminate any running spot instances
@@ -634,7 +683,8 @@ The project is actually growing fast in popularity and there are no plans to
 discontinue it, actually it's quite the opposite, external contributions are
 accelerating and the software is maturing fast. There are already hundreds of
 installations and many companies are evaluating it or using it for development
-environments, while some are already using it in production.
+environments, while some are already using it in production and on/or on large
+scale installations saving them millions yearly.
 
 Since it's open source anyone can participate in the development, contribute
 fixes and improvements benefitting anyone else, so it's no longer a tiny
@@ -661,5 +711,5 @@ be using different values.
 
 Of course, all contributions are welcome :)
 
-For detais on how to contribute have a look
+For details on how to contribute have a look
 [here](https://github.com/AutoSpotting/AutoSpotting/blob/master/CONTRIBUTING.md)
