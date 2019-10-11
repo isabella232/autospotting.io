@@ -189,7 +189,7 @@ You therefore have the following options:
   "AutoSpotting" with something else in the code, infrastructure/configuration
   code and generated build artifacts.
 
-### Bleeding edge proprietary binaries
+### Evaluation binaries
 
 - These are binaries and Docker images built from the git repository after each
   commit.
@@ -202,20 +202,18 @@ You therefore have the following options:
 - These builds may sometimes be broken and barely tested. You will need to test
   the software yourself to make sure it works well from you.
 - Limited, best-effort community support, and only if you can reproduce the
-  problem with the latest nightly build.
+  problem with the latest build.
 
 ### Stable Proprietary binaries
 
 - Carefully selected binaries that were tested and confirmed to work well, so
   you don't need to test them yourself.
 - Come with installation help, long term enterprise support and notifications
-  over a private channel when a newer stable version is available.
-- Unlimited savings, but licensed in multiple inexpensive pricing tiers,
-  on a monthly subscription basis depending on the size of your infrastructure
-- payable on a monthly basis through
-  [Patreon](https://www.patreon.com/join/cristim). If your infrastructure
-  doesn't match those tiers, please feel free to get in touch so we can give you
-  a custom offer.
+  over a private channel when a newer stable version is available. These
+  notifications are only given to the stable build subscribers.
+- Unlimited savings
+- Licensed in a flat, inexpensive monthly subscription basis payable through
+  [Patreon](https://www.patreon.com/join/cristim).
 
 ### Exception for contributors
 
@@ -225,8 +223,7 @@ You therefore have the following options:
 - You will need to get in touch on gitter and prove that you qualify for this,
   and will be given some special installation instructions.
 - These don't include the enterprise support, but the limited, best-effort
-  community support of the bleeding edge binaries.
-
+  community support of the evaluation binaries.
 
 ## How do I enable it?
 
@@ -498,7 +495,10 @@ terminate at the same time.
 AutoSpotting is much like the relatively new mixed groups feature, but it still
 has some unique capabilities:
 
-- you can enable/disable it at will, even on a schedule basis
+- automated fail-over to on-demand instances when spot capacity is unavailable
+  and back to spot soon after the spot market conditions improve
+- you can enable/disable it at will from CI/CD pipelines and even on a schedule
+  basis
 - you can roll it out across your entire fleet in opt-out mode, without any
   configuration changes, in particular you don't need to convert your groups to
   LaunchTemplates
@@ -510,8 +510,11 @@ To be fair it also does have a few drawbacks (some currently being worked on):
 
 - the increased churn caused by the instance replacement process
 - lack of support for launch lifecycle hooks
-- no support for China and GovCloud
-- some runtime costs and potential software/maintenance costs
+- no support for the AWS regions located in China
+- no support for GovCloud
+- some maintenance costs, as well as small runtime costs
+- potential software costs if you don't build it from the open source code
+  yourself
 
 ## How does AutoSpotting compare to the spot fleet AWS offering?
 
@@ -686,15 +689,19 @@ anyone else can benefit from them.
 No way!
 
 The project is actually growing fast in popularity and there are no plans to
-discontinue it, actually it's quite the opposite, external contributions are
-accelerating and the software is maturing fast. There are already hundreds of
-installations and many companies are evaluating it or using it for development
-environments, while some are already using it in production and on/or on large
-scale installations saving them millions yearly.
+discontinue it, actually it's quite the opposite, contributions are accelerating
+and the software is already quite mature after more than 3 years of constant
+development.
 
-Since it's open source anyone can participate in the development, contribute
-fixes and improvements benefitting anyone else, so it's no longer a tiny
-one-man-show open source hobby project.
+New people install it every day, there are many hundreds of installations, if
+not thousands(it's hard to estimate). Many people are already using it in
+production, including on large scale installations with millions in yearly
+savings.
+
+The stable binaries are generating recurring income to the initial author, who
+is this way incentivized to continue development. This has been growing fast
+over the last year and is on track to keep growing as more people adopt it. If
+you like this project please consider also signing up to a monthly subscription.
 
 ## How do I Uninstall it?
 
@@ -703,8 +710,8 @@ You just need to remove the AutoSpotting CloudFormation or Terraform stack.
 The groups will eventually revert to the original state once the spot market
 price fluctuations terminate all the spot instances. In some cases this may take
 months, so you can also terminate them immediately, the best way to achieve this
-is by configuring autospotting to use 100% on-demand capacity before the
-uninstall.
+is by configuring autospotting to use 100% on-demand capacity for a while before
+uninstalling it.
 
 Fine-grained control on a per group level can be achieved by removing or setting
 the `spot-enabled` tag to any other value. AutoSpotting only touches groups

@@ -170,7 +170,7 @@ paginate = 10
 [params.pricing]
     enable = true
     title = "Pricing Plans"
-    get_in_touch_text = "Do you have more than 5 AWS accounts?"
+    get_in_touch_text = "Do you have any questions?"
     get_in_touch = "Let's talk!"
     get_in_touch_url = "https://gitter.im/cristim"
 
