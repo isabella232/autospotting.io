@@ -1,0 +1,12 @@
+tile: Evaluati
+price: FREE
+features:
+  - Pre-built from latest trunk code
+  - Barely tested, often Alpha/Beta quality
+  - Installs in minutes
+  - Limited support via Github if you run the latest version
+  - Restricted to $1000 monthly savings per installation
+  - Can be unlocked by purchasing a stable build subscription
+
+button: Install
+button_url: https://bit.ly/AutoSpotting
