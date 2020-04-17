@@ -1,2 +1,8 @@
 themes/
 public/
+.DS_Store
+.config.toml
+.content
+.data
+.layouts
+.static
