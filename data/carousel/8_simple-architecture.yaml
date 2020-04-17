@@ -1,8 +1,0 @@
-weight: 8
-title: "Simple by design"
-description: >
-  <ul class="list-style-none">
-    <li>Minimalist implementation</li>
-    <li>Serverless architecture</li>
-  </ul>
-image: "img/carousel/architecture.png"
