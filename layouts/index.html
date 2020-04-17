@@ -1,42 +1,31 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+{{ define "main" }}
 
-  {{ partial "head.html" . }}
+{{ partial "banner.html" . }}
 
-  <body>
+{{ partial "navigation.html" . }}
 
-    <div id="all">
+{{ partial "about.html" . }}
 
-        <header>
+{{ partial "feature.html" . }}
 
-          {{ partial "top.html" . }}
+{{ partial "cta.html" . }}
 
-          {{ partial "nav.html" . }}
+{{ partial "service.html" . }}
 
-        </header>
+{{ partial "skill.html" . }}
 
-        {{ partial "carousel.html" . }}
+{{ partial "portfolio.html" . }}
 
-        {{ partial "features.html" . }}
+{{ partial "funfacts.html" . }}
 
-        {{ partial "testimonials.html" . }}
+<!-- {{ partial "team.html" . }} -->
 
-        {{ partial "clients.html" . }}
+{{ partial "pricing.html" . }}
 
-        {{ partial "pricing.html" . }}
+{{ partial "testimonials.html" . }}
 
-        {{ partial "see_more.html" . }}
+{{ partial "blog.html" . }}
 
-        {{ partial "recent_posts.html" . }}
+{{ partial "contact.html" . }}
 
-
-
-        {{ partial "footer.html" . }}
-
-    </div>
-    <!-- /#all -->
-
-    {{ partial "scripts.html" . }}
-
-  </body>
-</html>
+{{ end }}
