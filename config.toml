@@ -52,8 +52,8 @@ URL = "services"
 weight = 2
 
 [[menu.main]]
-name = "Portfolio"
-URL = "portfolio"
+name = "Clients"
+URL = "clients"
 weight = 3
 
 [[menu.main]]
