@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="{{ `css/custom.css` | relURL}}" media="screen">
 	
 	<!-- use sass instead of the file above -->
-	{{- $options := (dict "targetPath" "css/custom-styles.css" "outputStyle" "compressed" "enableSourceMap" "true") -}}
+	{{- $options := (dict "targetPath" "css/customStyles.css" "outputStyle" "compressed" "enableSourceMap" "true") -}}
 	{{- $customStyles := resources.Get "sass/custom.sass" | resources.ExecuteAsTemplate "custom.sass" . | resources.ToCSS $options | resources.Fingerprint "sha512" }}
 	<link rel = 'stylesheet' href = '{{ $customStyles.Permalink }}' integrity = '{{ $customStyles.Data.Integrity }}'>
 
