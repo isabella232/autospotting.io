@@ -1,3 +1,3 @@
-.pricing li{padding:10px}.logo{width:10rem}.member{margin-bottom:1.5rem}.member_avatar{display:block;width:100%}.member_box{height:100%}.portfolio_item{display:flex;align-items:stretch}.portfolio-block{background:#fff}.service-block ul{text-align:left}
+.pricing li{padding:10px}.logo{width:10rem}.member{margin-bottom:1.5rem}.member_avatar{display:block;width:100%}.member_box{height:100%}.portfolio_item{display:flex;align-items:stretch}.portfolio-block{background:#fff}.service-block{height:100%}.service-block ul{text-align:left}
 
 /*# sourceMappingURL=customStyles.css.map */
