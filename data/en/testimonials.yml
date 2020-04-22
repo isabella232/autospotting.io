@@ -1,0 +1,42 @@
+############################### team ############################
+testimonials:
+  enable : true
+  title : Reviews
+  team_member :
+    # team member loop
+    - review: "Thanks to AutoSpotting we're saving more than 50% of our server costs on AWS"
+      name: "Jan Čurn"
+      position: "CEO, Apify"
+      avatar: "images/testimonials/jan-curn.jpg"
+      avatar_webp: "images/testimonials/webp/jan-curn.webp"
+    
+    - review: "Just deployed my first installation of the AutoSpotting tool… It took only 3 minutes and 5 clicks and now I’m saving 60% of my EC2 cost with Spot instances automagically. Kudos Sir!"
+      name: "Falko Zurell"
+      position: "Head of Platform Operations, HERE"
+      avatar: "images/testimonials/falko.png"
+      avatar_webp: "images/testimonials/webp/falko.webp"
+    
+    - review: "After I saw you made the RunInstances API call I generally cheered with so much joy! Thank you for such an amazing tool, you have the best open source project that I've ever had the pleasure to use."
+      name: "Kevin T."
+      position: "DevOps Engineer, 3M"
+      avatar: "images/testimonials/kevin.jpeg"
+      avatar_webp: "images/testimonials/webp/kevin.webp"
+    
+    - review: "I recently launched Autospotting to help with our deployments that can't use fleets. It's been working really well."
+      name: "Levi McCormick"
+      position: "Lead Cloud Eng. SPSCommerce"
+      avatar: "images/testimonials/levi.jpg"
+      avatar_webp: "images/testimonials/webp/levi.webp"
+    
+    - review: "We’re making use of an awesome little open source tool called autospotting. In a nutshell, it will automatically replace an on-demand instance in our ASG’s when a cheaper spot instance is available."
+      name: "Eric Holmes"
+      position: "Software Engineer, Remind"
+      avatar: "images/testimonials/person-2.png"
+      avatar_webp: "images/testimonials/webp/person-2.webp"
+    
+    - review: "Got spot Instances launched - launching r4.large at the price of t2.large :-)"
+      name: "Sandeep Shantharam"
+      position: "Software Engineer"
+      avatar: "images/testimonials/person-5.png"
+      avatar_webp: "images/testimonials/webp/person-5.webp"
+    

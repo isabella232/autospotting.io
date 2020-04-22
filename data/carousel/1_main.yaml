@@ -1,9 +1,0 @@
-weight: 1
-title: "Save up to 90% in minutes"
-description: >
-  <ul class="list-style-none">
-    <li>Easiest to adopt spot automation</li>
-    <li>Requires minimal infrastructure changes, just tag your existing AutoScaling
-    groups or even run against all of them</li>
-  </ul>
-image: "img/carousel/cost-savings.png"

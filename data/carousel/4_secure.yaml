@@ -1,9 +1,0 @@
-weight: 4
-title: "Secure"
-description: >
-  <ul class="list-style-none">
-    <li>Fully contained within your AWS account</li>
-    <li>Minimal set of IAM permissions</li>
-    <li>Auditable (open source)</li>
-  </ul>
-image: "img/carousel/secure.jpg"

@@ -1,9 +1,0 @@
-weight: 7
-title: "Fully Automated"
-description: >
-  <ul class="list-style-none">
-     <li>Bid price calculation</li>
-     <li>Instance type selection</li>
-     <li>Instance replacement with constant capacity</li>
-   </ul>
-image: "img/carousel/fully-automated.jpg"

@@ -1,193 +1,140 @@
-style = "default"
+################################# Default configuration ###################
+baseURL = "/"
+title = "AutoSpotting"
+theme = "meghna-hugo"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "15"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = []
 
-baseurl = "https://autospotting.org/"
-title = "AutoSpotting - The easiest to adopt tool for EC2 spot market automation"
-theme = "universal"
+############################# Plugins ##########################
+# css plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+link = "plugins/magnific-popup/magnific-popup.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700&display=swap"
 
-themesDir = "themes"
-languageCode = "en-us"
-# Site language. Available translations in the theme's `/i18n` directory.
-defaultContentLanguage = "en"
-# Enable comments by entering your Disqus shortname
-disqusShortname = "autospotting"
-# Enable Google Analytics by entering your tracking code
-googleAnalytics = "UA-27789976-3"
+# js plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/shuffle/shuffle.min.js"
+[[params.plugins.js]]
+link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
+[[params.plugins.js]]
+link = "plugins/lazy-load/lozad.min.js"
+[[params.plugins.js]]
+link = "plugins/google-map/map.js"
 
-# Define the number of posts per page
-paginate = 10
-
-[menu]
-
-# Main menu
+############################# Navigation ##################################
+[[menu.main]]
+name = "About Us"
+URL = "about"
+weight = 1
 
 [[menu.main]]
-    name = "Home"
-    url  = "/"
-    weight = 1
+name = "Service"
+URL = "services"
+weight = 2
 
 [[menu.main]]
-    name = "Blog"
-    url  = "/blog/"
-    weight = 2
+name = "Clients"
+URL = "clients"
+weight = 3
 
 [[menu.main]]
-    name = "FAQ"
-    identifier = "faq"
-    url  = "/faq/index.html"
-    weight = 3
+name = "Reviews"
+URL = "reviews"
+weight = 4
 
 [[menu.main]]
-    name = "Contact"
-    url  = "/contact/index.html"
-    weight = 4
+name = "Pricing"
+URL = "pricing"
+weight = 5
 
-# Top bar social links menu
+[[menu.main]]
+name = "Blog"
+URL = "blog"
+weight = 6
 
-[[menu.topbar]]
-    weight = 1
-    name = "GitHub"
-    url = "https://github.com/cristim/autospotting"
-    pre = "<i class='fa fa-2x fa-github'></i>"
+[[menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 7
 
-#[[menu.topbar]]
-#    weight = 2
-#    name = "Facebook"
-#    url = "http://facebook.com"
-#    pre = "<i class='fa fa-2x fa-facebook'></i>"
+#### external / static link ####
+# [[menu.static]]
+# name = "Themefisher"
+# URL = "https://themefisher.com/"
+# weight = 8
 
-#[[menu.topbar]]
-#    weight = 3
-#    name = "Twitter"
-#    url = "http://twitter.com"
-#    pre = "<i class='fa fa-2x fa-twitter'></i>"
-
-#[[menu.topbar]]
-#    weight = 4
-#    name = "Email"
-#    url = "mailto:your@email.com"
-#    pre = "<i class='fa fa-2x fa-envelope'></i>"
-
+############################# Default Parameters ##########################
 [params]
-    viewMorePostLink = "/blog/"
-    author = "Admin"
-    defaultKeywords = ["autospotting"]
-    defaultDescription = "Blog post about AutoSpotting"
+logo = "images/logo.png"
+# Meta data
+description = "Responsive Multipurpose Parallax HTML5 Template"
+author = "Themefisher"
+# Google Analitycs
+google_analitycs_id = "" # Your ID
+# post share
+post_share = true
 
-#    Google Maps API key (if not set will default to not passing a key.)
-#    googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
+# preloader
+[params.preloader]
+enable = true
+preloader = "images/logo.png"
 
-    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-#    style = "default"
+# google map
+[params.map]
+enable = true
+gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
+map_latitude = "51.5223477"
+map_longitude = "-0.1622023"
+map_marker = "images/marker.png"
 
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-    #
-    # Enable the contact form by entering your Formspree.io email
-#   email = "your@email.com"
+############################# social icons ##########################
+[[params.social]]
+icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
+link = "#"
 
-    about_us = "<p>AutoSpotting - An easy to use tool for automating the use of EC2 spot instances in existing on-demand AutoScaling groups.</p>"
-    copyright = "Copyright (c) 2016 - 2018, Cristian Măgherușan-Stanciu; all rights reserved."
+[[params.social]]
+icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
+link = "#"
 
-    # Format dates with Go's time formatting
-    date_format = "2 Jan 2006"
+[[params.social]]
+icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
+link = "#"
 
-    logo = "img/logo.png"
-#    address = """<p><strong>Universal Ltd.</strong>
-#        <br>13/25 New Avenue
-#        <br>Newtown upon River
-#        <br>45Y 73J
-#        <br>England
-#        <br>
-#        <strong>Great Britain</strong>
-#      </p>
-#      """
-#    latitude = "-12.043333"
-#    longitude = "-77.028333"
+[[params.social]]
+icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
+link = "#"
 
-[Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+[[params.social]]
+icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
+link = "#"
 
-# Enable or disable top bar with social icons
-[params.topbar]
-    enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us on
-        <a href="https://gitter.im/cristim/autospotting">gitter</a>.</p>
-        <p class="hidden-md hidden-lg">
-        <a href="#" data-animate-hover="pulse">
-        <i class="fa fa-phone"></i></a>
-        <a href="#" data-animate-hover="pulse">
-        <i class="fa fa-envelope"></i>
-        </a>
-      </p>
-      """
+[[params.social]]
+icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
+link = "#"
 
-# Enable and disable widgets for the right sidebar
-[params.widgets]
-    categories = true
-    tags = true
-    search = true
-
-[params.carousel]
-    enable = true
-    # All carousel items are defined in their own files. You can find example items
-    # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
-
-[params.features]
-    enable = false
-    # All features are defined in their own files. You can find example items
-    # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
-
-[params.testimonials]
-    enable = true
-    # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
-    title = "Testimonials"
-    subtitle = '''We have hundreds of happy users: from individuals
-        saving a few bucks a month, to start-ups of all stages and sizes and even
-        well-known large companies that save $10000s monthly, and we always love
-        to hear about their success stories.'''
-
-[params.clients]
-    enable = true
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Major Users"
-    subtitle = ""
-
-[params.pricing]
-    enable = true
-    title = "Pricing Plans"
-    get_in_touch_text = "Do you have any questions?"
-    get_in_touch = "Let's talk!"
-    get_in_touch_url = "https://gitter.im/cristim"
-
-[params.see_more]
-    enable = true
-    icon = "fa fa-file-code-o"
-    title = "Curious for more?"
-
-    subtitle = '''
-        You can see more detailed and up-to-date information about the project
-        and get the installation instructions if you visit the link below.
-        '''
-
-    link_url = "https://github.com/cristim/autospotting"
-    link_text = "Github project page"
-
-[params.recent_posts]
-    enable = true
-    title = "From our blog"
-    subtitle = "Latest news about the project will be shared here on a regular basis."
+################################ English Language ########################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+home = "Home"

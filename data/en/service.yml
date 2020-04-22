@@ -1,0 +1,61 @@
+################################# Service #################################
+service:
+  enable : true
+  title : Our Services
+  service_item :
+    - name: "Save up to 90% in minutes"
+      icon: "ti-world"
+      content: |
+        - Easiest to adopt spot automation
+        - Requires minimal infrastructure changes, just tag your existing AutoScaling
+          groups or even run against all of them
+
+    - name: "Safe for Production"
+      icon: "ti-layout"
+      content: |
+        - Automated fail-over to on-demand
+        - Can keep some on-demand running
+        - Gradual instance replacement
+        - Automated traffic draining for instances behind ELBs
+        - Supports termination lifecycle hooks
+
+    - name: "Supported"
+      icon: "ti-blackboard"
+      content: |
+        - Stable, tested and supported binaries are available for a fee
+        - Setup help and long-term support are also available
+        - Vibrant Open Source Community
+
+    - name: "Secure"
+      icon: "ti-palette"
+      content: |
+        - Fully contained within your AWS account
+        - Minimal set of IAM permissions
+        - Auditable (open source)
+
+    - name: "Compatible"
+      icon: "ti-package"
+      content: |
+          - Out of the box support for most AWS services that expose or integrate
+          with AutoScaling groups, including but not limited to ECS, Beanstalk, Kubernetes clusters managed by kops
+          - Easy to automate from CI/CD scripts
+
+    - name: "Low cost overhead"
+      icon: "ti-pulse"
+      content: |
+        - Negligible runtime costs
+        - Open Source code base
+        - Inexpensive easy to install supported binaries available
+
+    - name: "Fully Automated"
+      icon: "ti-pulse"
+      content: |
+        - Bid price calculation
+        - Instance type selection
+        - Instance replacement with constant capacity
+
+    - name: "Simple by design"
+      icon: "ti-pulse"
+      content: |
+        - Minimalist implementation
+        - Serverless architecture

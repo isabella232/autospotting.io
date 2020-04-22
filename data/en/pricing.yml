@@ -1,0 +1,50 @@
+##################################### pricing ##############################
+pricing:
+  enable : true
+  title : Pricing Plans
+  pricing_table :
+    # pricing table loop
+    - name: Beta (Evaluation)
+      price : FREE
+      unit : ""
+      services:
+        - Pre-built from latest trunk code
+        - Barely tested, often Alpha/Beta quality
+        - Installs in minutes
+        - Limited support via Github if you report issues of the latest version
+        - Restricted to $1000 monthly savings per installation
+        - Can be unlocked by purchasing a stable build subscription
+      button:
+        label : "INSTALL"
+        link : "https://bit.ly/AutoSpotting"
+      
+    # pricing table loop
+    - name : Stable
+      price : $29/AWS account
+      unit : month
+      services:
+        - Pre-built from carefully tested code revisions
+        - Installs in minutes
+        - Production-grade (already used in production)
+        - Covered by Enterprise support
+        - No savings limit
+        - Licensed per AWS account, can be used on any number of regions
+        - Discounts can be negotiated at scale
+      button:
+        label : "SUBSCRIBE"
+        link : "https://patreon.com/cristim"
+        
+    # pricing table loop
+    - name : Open Source
+      price : Free
+      unit : ""
+      services:
+        - Code available on GitHub, build it yourself (you must fork and rename it to something else since - AutoSpotting is a protected trademark)
+        - You need to figure out how to build and deploy it
+        - Barely tested, unstable at times
+        - Unsupported but can be arranged if you get in touch
+        - Unlimited customization possibilities, get in touch if you need help
+      button:
+        label : "GITHUB SOURCE"
+        link : "https://github.com/AutoSpotting/AutoSpotting"
+        
