@@ -1,9 +1,9 @@
 - id: blogTitle
-  translation: Latest Post
+  translation: Latest Posts
 - id: readMore
   translation: Read more
 - id: viewAllPost
-  translation: View All Post
+  translation: View All Posts
 - id: share
   translation: Share
 - id: aboutAuthor
@@ -15,4 +15,4 @@
 - id: all
   translation: All
 - id: copyright
-  translation: Copyright &copy; 2019 Cristian Măgherușan-Stanciu; All right reserved
+  translation: Copyright &copy; 2016-2020 Cristian Măgherușan-Stanciu; All right reserved
