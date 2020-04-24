@@ -1,7 +1,7 @@
 ############################### team ############################
 testimonials:
   enable : true
-  title : Reviews
+  title : User Testimonials
   team_member :
     # team member loop
     - review: "Thanks to AutoSpotting we're saving more than 50% of our server costs on AWS"
