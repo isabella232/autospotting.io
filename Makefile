@@ -8,5 +8,5 @@ upload:
 	aws cloudfront create-invalidation --distribution-id E18SR0Y6B0IZWS --paths '/*'
 
 local:
-	chromium-browser http://localhost:1313/
+	open http://localhost:1313/
 	hugo server -DEF
