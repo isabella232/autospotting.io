@@ -1,13 +1,13 @@
 #################################### portfolio ###############################
 clients:
   enable : true
-  title : Clients
+  title : Prominent Users
   clients_item :
     # portfolio item loop
     - name : Apify
       image : images/clients/apify.png
       image_webp : images/clients/webp/apify.webp
-      categories : ["enterprise"]
+      categories : ["startup"]
       link : "https://themefisher.com"
       
     # portfolio item loop
@@ -21,33 +21,33 @@ clients:
     - name : Cycloid
       image : images/clients/cycloid.png
       image_webp : images/clients/webp/cycloid.webp
-      categories : ["enterprise", "startup"]
+      categories : ["startup"]
       link : "#"
       
     # portfolio item loop
     - name : Huggy
       image : images/clients/huggy.png
       image_webp : images/clients/webp/huggy.webp
-      categories : ["enterprise", "startup"]
+      categories : ["startup"]
       link : "#"
       
     # portfolio item loop
     - name : Here
       image : images/clients/here.png
       image_webp : images/clients/webp/here.webp
-      categories : ["startup"]
+      categories : ["enterprise"]
       link : "#"
       
     # portfolio item loop
     - name : Qualcomm
       image : images/clients/qualcomm.png
       image_webp : images/clients/webp/qualcomm.webp
-      categories : ["startup"]
+      categories : ["enterprise"]
       link : "#"
       
     # portfolio item loop
     - name : Timber
       image : images/clients/timber.png
       image_webp : images/clients/webp/timber.webp
-      categories : ["enterprise"]
+      categories : ["startup"]
       link : "#"
