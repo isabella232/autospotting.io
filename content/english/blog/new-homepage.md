@@ -1,8 +1,8 @@
 ---
 title: "New Homepage"
 date: 2018-01-18T20:50:38+01:00
-image_webp: images/blog/blog-post-3.webp
-image: images/blog/blog-post-3.jpg
+image_webp: images/blog/meghna.webp
+image: images/blog/meghna.jpg
 author: John Doe
 ---
 
