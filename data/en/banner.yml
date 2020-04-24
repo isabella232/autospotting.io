@@ -4,9 +4,9 @@ banner:
   bg_image_webp : "images/backgrounds/hero-area.webp"
   bg_image : "images/backgrounds/hero-area.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
-  title : "The easiest to adopt tool for EC2 spot market automation"
+  title : "AutoSpotting"
   content : "The easiest to adopt tool for EC2 spot market automation"
   button:
     enable : true
-    label : "Explore Us"
+    label : "See More"
     link : "#services"
