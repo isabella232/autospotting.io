@@ -1,11 +1,11 @@
 ############################# call to action ##############################
 cta:
-  enable : true
-  bg_image : "images/backgrounds/bg-white-wall.jpg"
-  bg_image_webp : "images/backgrounds/bg-white-wall.webp"
-  title : "CURIOUS FOR MORE?"
-  content : "You can see more detailed and up-to-date information about the project and get the installation instructions if you visit the link below."
+  enable: true
+  bg_image: "images/backgrounds/bg-white-wall.jpg"
+  bg_image_webp: "images/backgrounds/bg-white-wall.webp"
+  title: "CURIOUS FOR MORE?"
+  content: "You can see more detailed and up-to-date information about the project and get the installation instructions if you visit the link below."
   button:
-    enable : true
-    label : "Github Project Page"
-    link : "https://github.com/cristim/autospotting"
+    enable: true
+    label: "Github Project Page"
+    link: "https://github.com/AutoSpotting/AutoSpotting"

@@ -7,7 +7,7 @@ paginate = "6"
 # post excerpt
 summaryLength = "15"
 # disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
+disqusShortname = "autospotting" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = []
 
@@ -89,7 +89,7 @@ logo = "images/logo.png"
 description = "Responsive Multipurpose Parallax HTML5 Template"
 author = "Themefisher"
 # Google Analitycs
-google_analitycs_id = "" # Your ID
+google_analitycs_id = "UA-27789976-3" # Your ID
 # post share
 post_share = true
 

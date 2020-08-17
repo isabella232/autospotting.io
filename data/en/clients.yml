@@ -1,53 +1,105 @@
 #################################### portfolio ###############################
 clients:
-  enable : true
-  title : Prominent Users
-  clients_item :
-    # portfolio item loop
-    - name : Apify
-      image : images/clients/apify.png
-      image_webp : images/clients/webp/apify.webp
-      categories : ["startup"]
-      link : "https://themefisher.com"
-      
-    # portfolio item loop
-    - name : Branch
-      image : images/clients/branch.jpg
-      image_webp : images/clients/webp/branch.webp
-      categories : ["startup"]
-      link : ""
-      
-    # portfolio item loop
-    - name : Cycloid
-      image : images/clients/cycloid.png
-      image_webp : images/clients/webp/cycloid.webp
-      categories : ["startup"]
-      link : "#"
-      
-    # portfolio item loop
-    - name : Huggy
-      image : images/clients/huggy.png
-      image_webp : images/clients/webp/huggy.webp
-      categories : ["startup"]
-      link : "#"
-      
-    # portfolio item loop
-    - name : Here
-      image : images/clients/here.png
-      image_webp : images/clients/webp/here.webp
-      categories : ["enterprise"]
-      link : "#"
-      
-    # portfolio item loop
-    - name : Qualcomm
-      image : images/clients/qualcomm.png
-      image_webp : images/clients/webp/qualcomm.webp
-      categories : ["enterprise"]
-      link : "#"
-      
-    # portfolio item loop
-    - name : Timber
-      image : images/clients/timber.png
-      image_webp : images/clients/webp/timber.webp
-      categories : ["startup"]
-      link : "#"
+  enable: true
+  title: Prominent Users
+  clients_item:
+
+    - name: Apify
+      image: images/clients/apify.png
+      image_webp: images/clients/webp/apify.webp
+      categories: ["startup"]
+      link: "https://themefisher.com"
+
+
+    - name: Branch
+      image: images/clients/branch.jpg
+      image_webp: images/clients/webp/branch.webp
+      categories: ["startup"]
+      link: ""
+
+
+    - name: Cycloid
+      image: images/clients/cycloid.png
+      image_webp: images/clients/webp/cycloid.webp
+      categories: ["startup"]
+      link: "#"
+
+
+    - name: Huggy
+      image: images/clients/huggy.png
+      image_webp: images/clients/webp/huggy.webp
+      categories: ["startup"]
+      link: "#"
+
+
+    - name: Here
+      image: images/clients/here.png
+      image_webp: images/clients/webp/here.webp
+      categories: ["enterprise"]
+      link: "#"
+
+    - name: Qualcomm
+      image: images/clients/qualcomm.png
+      image_webp: images/clients/webp/qualcomm.webp
+      categories: ["enterprise"]
+      link: "#"
+
+    - name: Timber
+      image: images/clients/timber.png
+      image_webp: images/clients/webp/timber.webp
+      categories: ["startup"]
+      link: "#"
+
+    - name: Disney
+      image: images/clients/disney.png
+      image_webp: images/clients/webp/disney.webp
+      categories: ["enterprise"]
+      link: "#"
+
+    - name: Expedia
+      image: images/clients/expedia.jpg
+      image_webp: images/clients/webp/expedia.webp
+      categories: ["enterprise"]
+      link: "https://expedia.com"
+
+    - name: Samsung
+      image: images/clients/samsung.png
+      image_webp: images/clients/webp/samsung.webp
+      categories: ["enterprise"]
+      link: "#"
+
+    - name: TED
+      image: images/clients/ted.png
+      image_webp: images/clients/webp/ted.webp
+      categories: ["non-profit"]
+      link: "#"
+
+    - name: Mozilla
+      image: images/clients/mozilla.png
+      image_webp: images/clients/webp/mozilla.webp
+      categories: ["non-profit"]
+      link: "#"
+
+    - name: Telefonica
+      image: images/clients/ttefonica.png
+      image_webp: images/clients/webp/telefonica.webp
+      categories: ["enterprise"]
+      link: "#"
+
+    - name: UK Department for Work & Pensions
+      image: images/clients/dwp.png
+      image_webp: images/clients/webp/dwp.webp
+      categories: ["public-sector"]
+      link: "#"
+
+    - name: The University of Texas at Austin
+      image: images/clients/utaustin.png
+      image_webp: images/clients/webp/utaustin.webp
+      categories: ["public-sector"]
+      link: "#"
+
+    - name: Canal+
+      image: images/clients/canal+.png
+      image_webp: images/clients/webp/canal+.webp
+      categories: ["enterprise"]
+      link: "#"

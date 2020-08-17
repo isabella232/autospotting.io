@@ -1,12 +1,12 @@
 ##################################### pricing ##############################
 pricing:
-  enable : true
-  title : Pricing Plans
-  pricing_table :
+  enable: true
+  title: Pricing Plans
+  pricing_table:
     # pricing table loop
     - name: Beta (Evaluation)
-      price : FREE
-      unit : ""
+      price: FREE
+      unit: ""
       services:
         - Pre-built from latest trunk code
         - Barely tested, often Alpha/Beta quality
@@ -15,13 +15,13 @@ pricing:
         - Restricted to $1000 monthly savings per installation
         - Can be unlocked by purchasing a stable build subscription
       button:
-        label : "INSTALL"
-        link : "https://bit.ly/AutoSpotting"
-      
+        label: "INSTALL"
+        link: "https://bit.ly/AutoSpotting"
+
     # pricing table loop
-    - name : Stable
-      price : $29/AWS account
-      unit : month
+    - name: Stable
+      price: $29/AWS account/month
+      unit: month
       services:
         - Pre-built from carefully tested code revisions
         - Installs in minutes
@@ -29,22 +29,21 @@ pricing:
         - Covered by Enterprise support
         - No savings limit
         - Licensed per AWS account, can be used on any number of regions
-        - Discounts can be negotiated at scale
+        - Discounts can be negotiated at scale, just ask
       button:
-        label : "SUBSCRIBE"
-        link : "https://patreon.com/cristim"
-        
+        label: "SUBSCRIBE"
+        link: "https://patreon.com/cristim"
+
     # pricing table loop
-    - name : Open Source
-      price : Free
-      unit : ""
+    - name: Open Source
+      price: Free
+      unit: ""
       services:
-        - Code available on GitHub, build it yourself (you must fork and rename it to something else since - AutoSpotting is a protected trademark)
-        - You need to figure out how to build and deploy it
-        - Barely tested, unstable at times
-        - Unsupported but can be arranged if you get in touch
-        - Unlimited customization possibilities, get in touch if you need help
+        - Code available on GitHub under the OSL-3 license (exemptions are available for purchase)
+        - You can build it yourself, but the main branch may be unstable at times
+        - Normally unsupported, but support plans are available for purchase
+        - Unlimited customization possibilities
+        - Custom development and DIY help are available from the main author
       button:
-        label : "GITHUB SOURCE"
-        link : "https://github.com/AutoSpotting/AutoSpotting"
-        
+        label: "GITHUB SOURCE"
+        link: "https://github.com/AutoSpotting/AutoSpotting"

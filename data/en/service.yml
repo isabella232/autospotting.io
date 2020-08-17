@@ -1,61 +1,63 @@
 ################################# Service #################################
 service:
-  enable : true
-  title : Main Features
-  service_item :
-    - name: "Save up to 90% in minutes"
-      icon: "ti-world"
-      content: |
-        - Easiest to adopt spot automation
-        - Requires minimal infrastructure changes, just tag your existing AutoScaling
-          groups or even run against all of them
-
+  enable: true
+  title: Main Features
+  service_item:
     - name: "Safe for Production"
       icon: "ti-layout"
       content: |
-        - Automated fail-over to on-demand
-        - Can keep some on-demand running
-        - Gradual instance replacement
+        - Automated fail-over to on-demand within each AutoScaling Group
+        - Mature (4+ years old), production-grade software (>80% unit test coverage), used at hundreds of companies of all shapes and sizes
+        - Simple in operation, essentially just replaces EC2 instances with spot clones
+        - Best effort, keeps infrastructure as-is in case of most failures
+        - Configurable to keep some amount of on-demand instances in each ASG
         - Automated traffic draining for instances behind ELBs
         - Supports termination lifecycle hooks
+        - Can be enabled/suspended on a schedule
+
+    - name: "Minimal Friction"
+      icon: "ti-world"
+      content: |
+        - Installs in minutes using CloudFormation, Terraform or even as Docker container with certain limitations
+        - Requires minimal infrastructure changes, just tag your existing long-running AutoScaling
+          groups(ASGs) and it will gradually swap their instances with much cheaper but at least as large identically configured spot clones
+        - Configuration overrides per ASG basis using additional tags offering flexibility
+        - Can be mass-deployed on entire AWS Organizations using CloudFormation StackSets
+        - Within an account can be configured to opt-out mode to adopt it on all but few disabled ASGs
+        - Fully Automated bid price calculation and instance type selection
 
     - name: "Supported"
       icon: "ti-blackboard"
       content: |
-        - Stable, tested and supported binaries are available for a fee
-        - Setup help and long-term support are also available
-        - Vibrant Open Source Community
+        - Stable, tested and supported binaries are available for a small monthly fee
+        - Setup help and long-term support are covered
+        - Additional support plans can be purchased independently if needed
+        - Vibrant Open Source community if you opt not to use the recommended support plan
 
     - name: "Secure"
       icon: "ti-palette"
       content: |
-        - Fully contained within your AWS account
-        - Minimal set of IAM permissions
+        - Fully contained within your AWS account, without any cross-account IAM setup
+        - Minimal set of IAM permissions, only those required for its operation
         - Auditable (open source)
 
     - name: "Compatible"
       icon: "ti-package"
       content: |
-          - Out of the box support for most AWS services that expose or integrate
-          with AutoScaling groups, including but not limited to ECS, Beanstalk, Kubernetes clusters managed by kops
-          - Easy to automate from CI/CD scripts
+        - Out of the box support for most AWS services that backed by AutoScaling groups, including but not limited to ECS, Kubernetes, Beanstalk
+        - Easy to automate(suspend/resume) from CI/CD scripts
 
     - name: "Low cost overhead"
       icon: "ti-pulse"
       content: |
         - Negligible runtime costs
         - Open Source code base
-        - Inexpensive easy to install supported binaries available
-
-    - name: "Fully Automated"
-      icon: "ti-pulse"
-      content: |
-        - Bid price calculation
-        - Instance type selection
-        - Instance replacement with constant capacity
+        - Inexpensive (typically cost 1-3% of the generated savings), supported binaries are available
+        - No vendor lock-in if you decide to stop using it, just uninstall it and your groups will eventually revert to fully on-demand after their spot instances are reclaimed
 
     - name: "Simple by design"
       icon: "ti-pulse"
       content: |
-        - Minimalist implementation
-        - Serverless architecture
+        - Minimalist serverless implementation, it's essentially just a Lambda function.
+        - Easy to troubleshoot in case of failures
+        - There are no dashboards, admin panels or other gimmicks: use native AWS tools for cost tracking and administration: mainly Billing Console, CloudFormation
