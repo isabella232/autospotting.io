@@ -606,6 +606,70 @@ Many of these commercial offerings have in common a number of things:
   polished than both AWS Spot Fleets and AutoSpotting, and they may be
   cloud-provider-agnostic, but their price tag is huge.
 
+## How does AutoSpotting compare to commercial offerings such as Xosphere and MaxSpotter?
+
+Both these commercial tools are based on the older MIT-licensed AutoSpotting
+source code with a few additional closed-source extensions. So far none of them
+has contributed anything back towards AutoSpotting development and they don't
+give any credit in their marketing materials.
+
+They operate similarly to AutoSpotting in many ways, so if you don't really need
+their additional features it's relatively easy to migrate amongst them by
+renaming the tags set on your AutoScaling groups, or you can even
+re-configure/customize AutoSpotting to accept their configuration tags. Please
+[get in touch](https://gitter.im/cristim) if you need help migrating from them
+to AutoSpotting.
+
+All in all you get many of the AutoSpotting benefits, but at a much higher cost
+overhead. Below you can see a rough feature/cost comparison with both of them.
+
+### Xosphere
+
+Pros
+
+- Offers native Kubernetes and ECS integration
+- Supports attaching EBS volumes for stateful workloads
+- Available on the AWS Marketplace
+- Supports GovCloud
+- Automatic diversification of spot instances
+- Has a costs dashboard
+
+Cons
+
+- Lacking some recent developments in AutoSpotting since they forked the code
+  back in 2018
+- Charges 15-20% of savings depending on instance type and pricing model.
+- There's no published formula on how to calculate your costs and they reserve
+  the rights to change prices at a month notice, so you can't predict your costs
+  in advance.
+
+When to choose Xosphere over AutoSpotting
+
+- you depend on their closed source additional functionality. Keep in mind that
+  some of them are also doable with AutoSpottingbut might require additional
+  effort.
+- you have infrastructure in GovCloud
+- their unpredictable and much higher costs are okay for you
+
+### MaxSpotter
+
+Pros
+
+- User-friendly dashboard
+- Uses machine-learning for preemptive shutdown of terminating instances and
+  choosing instances with low interruption rates.
+
+Cons
+
+- Lacking some recent developments in AutoSpotting since they forked the code
+  back in 2019
+- Charges 50% of savings(Professional plan)
+
+When to choose MaxSpotter over AutoSpotting
+
+- you depend on their closed source additional functionality
+- their much higher cost overhead is not a concern for you
+
 ## Does AutoSpotting continuously search and use cheaper spot instances?
 
 If I attach autospotting to an AutoScaling group that is 100% spot instances,

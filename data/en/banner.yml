@@ -5,7 +5,16 @@ banner:
   bg_image : "images/backgrounds/hero-area.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "AutoSpotting"
-  content : "The easiest to adopt tool for EC2 spot market automation"
+  content : |
+    Saves up to 90% of AWS EC2 costs by automatically replacing
+    on-demand instances of existing AutoScaling groups with more cost-effective identically
+    configured spot instances.
+    Automated handling of spot termination events. Reliable fallback to on-demand instances.
+    Installs in minutes using CloudFormation or Terraform.
+    Convenient to deploy at scale using StackSets.
+    Enabled and configured using ASG tags to avoid launch configuration/template changes.
+    Negligible cost overhead. You can pause/remove it anytime by changing a tag.
+    Runs entirely in your own account. No vendor lock-in. Fully Open Source. Trusted by thousands of users.
   button:
     enable : true
     label : "See More"

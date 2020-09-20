@@ -44,7 +44,7 @@ service:
     - name: "Compatible"
       icon: "ti-package"
       content: |
-        - Out of the box support for most AWS services that backed by AutoScaling groups, including but not limited to ECS, Kubernetes, Beanstalk
+        - Out of the box support for most AWS services backed by AutoScaling groups, including but not limited to ECS, Kubernetes, Beanstalk
         - Easy to automate(suspend/resume) from CI/CD scripts
 
     - name: "Low cost overhead"
