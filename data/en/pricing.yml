@@ -4,13 +4,13 @@ pricing:
   title: Pricing Plans
   pricing_table:
     # pricing table loop
-    - name: Experimental
+    - name: Bleeding edge - thanks for helping us test it!
       price: FREE
       unit: ""
       services:
-        - Pre-built from latest trunk
+        - Pre-built from latest trunk code
         - Installs in minutes
-        - Sometimes contains experimental, barely tested code of Alpha/Beta quality
+        - Often contains experimental, barely tested code of Alpha/Beta quality
         - Limited support via Github
         - Restricted to $1000 monthly savings
         - Can be unlocked by purchasing a stable subscription
@@ -19,7 +19,7 @@ pricing:
         link: "https://bit.ly/AutoSpotting"
 
     # pricing table loop
-    - name: Stable
+    - name: Rock Solid - we tested it so you don't need to
       price: $29/AWS account/month
       unit: month
       services:
@@ -35,7 +35,7 @@ pricing:
         link: "https://patreon.com/cristim"
 
     # pricing table loop
-    - name: Open Source
+    - name: May the Source be with you!
       price: FREE
       unit: ""
       services:
@@ -44,7 +44,7 @@ pricing:
         - The main branch may be unstable at times
         - Normally unsupported, but support plans are available for purchase
         - Unlimited customization possibilities
-        - Custom development and DIY help are available from the main author
+        - Custom development and DIY help are available
       button:
         label: "BUILD FROM SOURCE CODE"
         link: "https://github.com/AutoSpotting/AutoSpotting"
