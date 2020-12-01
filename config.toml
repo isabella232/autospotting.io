@@ -10,6 +10,7 @@ summaryLength = "15"
 disqusShortname = "autospotting" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = []
+uglyURLs = true
 
 ############################# Plugins ##########################
 # css plugins

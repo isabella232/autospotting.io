@@ -158,11 +158,10 @@ The software itself is free and open source so there it's entirely free if
 you build the open source code straight from trunk, host it on your own
 infrastructure and test it all yourself.
 
-But as building it and setting it all up may take some time and effort,
-we also have some convenient to use evaluation binaries built straight from
-trunk. These are free to use, can be installed in minutes but are restricted
-to up to $1000 monthly savings and may occasionally be broken or have
-some immature/experimental features that haven't been yet tested thoroughly.
+But as building it and setting it all up may take some time and effort, we also
+have convenient to use evaluation binaries built straight from trunk. These are
+free to use, can be installed in minutes but haven't been yet tested thoroughly
+and expire after 30 days since being built.
 
 If you don't want to take any chances or spend time testing the trunk builds
 yourself, we also have supported prebuilt binaries that have been thoroughly
@@ -195,10 +194,8 @@ You therefore have the following options:
   commit.
 - They will save you the time needed to build the source code yourself from
   trunk, upload and host it on your own infrastructure.
-- Anyone can use them indefinitely on any number of AWS accounts for free.
-- They are restricted to $1000 savings for each user/company. This limit is only
-  enforced within a given AWS account, but you will infringe the license terms
-  if you achieve this across multiple AWS accounts.
+- Expire after a month from being built, designed to help find issues with the
+  latest code.
 - These builds may sometimes be broken and barely tested. You will need to test
   the software yourself to make sure it works well from you.
 - Limited, best-effort community support, and only if you can reproduce the

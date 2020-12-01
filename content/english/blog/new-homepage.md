@@ -2,8 +2,8 @@
 title: "New Homepage"
 date: 2018-01-18T20:50:38+01:00
 image_webp: images/blog/meghna.webp
-image: images/blog/meghna.jpg
-author: John Doe
+image: images/blog/sky.jpg
+author: Cristian Magherusan-Stanciu
 ---
 
 After a lot of time of using the GitHub README.md as only web presence of the

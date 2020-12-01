@@ -4,22 +4,22 @@ pricing:
   title: Pricing Plans
   pricing_table:
     # pricing table loop
-    - name: Bleeding edge - thanks for helping us test it!
+    - name: Bleeding edge - nightly build
       price: FREE
       unit: ""
       services:
         - Pre-built from latest trunk code
         - Installs in minutes
-        - Often contains experimental, barely tested code of Alpha/Beta quality
+        - Contains experimental, barely tested code of Alpha/Beta quality
         - Limited support via Github
-        - Restricted to $1000 monthly savings
-        - Can be unlocked by purchasing a stable subscription
+        - No savings limit
+        - Expires after a month from being built
       button:
         label: "INSTALL"
         link: "https://bit.ly/AutoSpotting"
 
     # pricing table loop
-    - name: Rock Solid - we tested it so you don't need to
+    - name: Rock Solid - stable and supported
       price: $29/AWS account/month
       unit: month
       services:

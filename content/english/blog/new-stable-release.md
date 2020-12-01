@@ -1,9 +1,8 @@
 ---
 title: "New Stable Release"
 date: 2019-04-28T20:09:38+01:00
-image_webp: images/blog/blog-post-3.webp
-image: images/blog/blog-post-3.jpg
-author: John Doe
+image: images/blog/sky.jpg
+author: Cristian Magherusan-Stanciu
 ---
 
 I'm very excited to announce that after many months of development and testing,
