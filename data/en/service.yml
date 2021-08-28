@@ -18,9 +18,9 @@ service:
     - name: "Minimal Friction"
       icon: "ti-world"
       content: |
-        - Installs in minutes using CloudFormation, Terraform or even as Docker container with certain limitations
+        - Installs in minutes using CloudFormation, Terraform or even as Docker container
         - Requires minimal infrastructure changes, just tag your existing long-running AutoScaling
-          groups(ASGs) and it will gradually swap their instances with much cheaper but at least as large identically configured spot clones
+          groups(ASGs) and it will gradually swap their instances with much cheaper identically configured Spot clones
         - Configuration overrides per ASG basis using additional tags offering flexibility
         - Can be mass-deployed on entire AWS Organizations using CloudFormation StackSets
         - Within an account can be configured to opt-out mode to adopt it on all but few disabled ASGs
@@ -29,9 +29,8 @@ service:
     - name: "Supported"
       icon: "ti-blackboard"
       content: |
-        - Stable, tested and supported binaries are available for a small monthly fee
+        - Easy to install, stable, tested and supported binaries are available from the AWS Marketplace for less than 5% of the generated savings
         - Setup help and long-term support are covered
-        - Additional support plans can be purchased independently if needed
         - Vibrant Open Source community if you opt not to use the recommended support plan
 
     - name: "Secure"
@@ -50,10 +49,10 @@ service:
     - name: "Low cost overhead"
       icon: "ti-pulse"
       content: |
-        - Negligible runtime costs
+        - Negligible runtime costs (serverless)
         - Open Source code base
-        - Inexpensive (typically cost 1-3% of the generated savings), supported binaries are available
-        - No vendor lock-in if you decide to stop using it, just uninstall it and your groups will eventually revert to fully on-demand after their spot instances are reclaimed
+        - Convenient binaries that cost less than 5% of the generated savings are available on the AWS Marketplace.
+        - No vendor lock-in, just uninstall it and your groups will eventually revert to fully on-demand.
 
     - name: "Simple by design"
       icon: "ti-pulse"

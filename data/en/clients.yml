@@ -5,95 +5,90 @@ clients:
   clients_item:
 
     - name: Expedia
-      image: images/clients/expedia.jpg
+ # image: images/clients/expedia.jpg
       # image_webp: images/clients/webp/expedia.webp
       categories: ["enterprise"]
       link: "https://expedia.com"
 
     - name: Samsung
-      image: images/clients/samsung.svg
+ # image: images/clients/samsung.svg
       # image_webp: images/clients/webp/samsung.webp
       categories: ["enterprise"]
       link: https://www.samsung.com
 
     - name: Qualcomm
-      image: images/clients/qualcomm.png
+ # image: images/clients/qualcomm.png
       # image_webp: images/clients/webp/qualcomm.webp
       categories: ["enterprise"]
       link: https://www.qualcomm.com
 
-    - name: Disney
-      image: images/clients/disney.png
-      # image_webp: images/clients/webp/disney.webp
-      categories: ["enterprise"]
-      link: https://www.disney.com
-
     - name: TED
-      image: images/clients/ted.png
+ # image: images/clients/ted.png
       # image_webp: images/clients/webp/ted.webp
       categories: ["non-profit"]
       link: "https://www.ted.com"
 
     - name: Mozilla
-      image: images/clients/mozilla.svg
+ # image: images/clients/mozilla.svg
       # image_webp: images/clients/webp/mozilla.webp
       categories: ["non-profit"]
       link: "https://mozilla.org"
 
     - name: UK Department for Work & Pensions
-      image: images/clients/dwp.png
+ # image: images/clients/dwp.png
       # image_webp: images/clients/webp/dwp.webp
       categories: ["public-sector"]
       link: "https://www.gov.uk/government/organisations/department-for-work-pensions"
 
     - name: The University of Texas at Austin
-      image: images/clients/utaustin.png
+ # image: images/clients/utaustin.png
       # image_webp: images/clients/webp/utaustin.webp
       categories: ["public-sector"]
       link: "https://www.utexas.edu"
 
     - name: Telefonica
-      image: images/clients/telefonica.png
+ # image: images/clients/telefonica.png
       # image_webp: images/clients/webp/telefonica.webp
       categories: ["enterprise"]
       link: "https://www.telefonica.com"
 
     - name: Canal+
-      image: images/clients/canalplus.svg
+ # image: images/clients/canalplus.svg
       # image_webp: images/clients/webp/canal+.webp
       categories: ["enterprise"]
       link: "https://www.canalplus.com"
 
     - name: Here Technologies
-      image: images/clients/here.png
+ # image: images/clients/here.png
       # image_webp: images/clients/webp/here.webp
       categories: ["enterprise"]
       link: https://www.here.com
 
     - name: Timber
-      image: images/clients/timber.png
+ # image: images/clients/timber.png
       # image_webp: images/clients/webp/timber.webp
       categories: ["startup"]
       link: https://www.timber.io
+
+
+
+    - name: Branch
+ # image: images/clients/branch.jpg
+      # image_webp: images/clients/webp/branch.webp
+      categories: ["startup"]
+      link: https://branch.io
+
+    - name: Cycloid
+ # image: images/clients/cycloid.png
+      # image_webp: images/clients/webp/cycloid.webp
+      categories: ["startup"]
+      link: https://cycloid.io
 
     - name: Apify
       image: images/clients/apify.png
       ## image_webp: images/clients/webp/apify.webp
       categories: ["startup"]
       link: https://apify.com
-
-    - name: Branch
-      image: images/clients/branch.jpg
-      # image_webp: images/clients/webp/branch.webp
-      categories: ["startup"]
-      link: https://branch.io
-
-    - name: Cycloid
-      image: images/clients/cycloid.png
-      # image_webp: images/clients/webp/cycloid.webp
-      categories: ["startup"]
-      link: https://cycloid.io
-
 
     - name: Huggy
       image: images/clients/huggy.png

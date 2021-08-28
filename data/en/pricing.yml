@@ -1,38 +1,37 @@
 ##################################### pricing ##############################
 pricing:
   enable: true
-  title: Pricing Plans
+  title: Pricing
   pricing_table:
     # pricing table loop
-    - name: Bleeding edge - nightly build
-      price: FREE
-      unit: ""
-      services:
-        - Pre-built from latest trunk code
-        - Installs in minutes
-        - Contains experimental, barely tested code of Alpha/Beta quality
-        - Limited support via Github
-        - No savings limit
-        - Expires after a month from being built
-      button:
-        label: "INSTALL"
-        link: "https://bit.ly/AutoSpotting"
+    # - name: Bleeding edge - nightly build
+    #   price: FREE
+    #   unit: ""
+    #   services:
+    #     - Pre-built from latest trunk code
+    #     - Installs in minutes
+    #     - Contains experimental, barely tested code of Alpha/Beta quality
+    #     - Limited support via Github
+    #     - No savings limit
+    #     - Expires after a month from being built
+    #   button:
+    #     label: "INSTALL"
+    #     link: "https://bit.ly/AutoSpotting"
 
     # pricing table loop
     - name: Rock Solid - stable and supported
-      price: $29/AWS account/month
+      price: Up to 5% of savings
       unit: month
       services:
         - Pre-built from carefully tested code revisions
         - Installs in minutes
         - Production-grade code
         - Covered by Enterprise support
-        - No savings limit
-        - Flat license fee per AWS account
-        - Discounts can be negotiated at scale
+        - Charged on your AWS bill
+        - Pay as you go
       button:
-        label: "INSTALL"
-        link: "https://patreon.com/cristim"
+        label: "Install"
+        link: "https://aws.amazon.com/marketplace/pp/prodview-6uj4pruhgmun6"
 
     # pricing table loop
     - name: May the Source be with you!
@@ -42,9 +41,9 @@ pricing:
         - Code available on GitHub under the OSL-3 license
         - You build it, you run it
         - The main branch may be unstable at times
-        - Normally unsupported, but support plans are available for purchase
-        - Unlimited customization possibilities
+        - Support plans are available for purchase
         - Custom development and DIY help are available
+        - Unlimited customization possibilities
       button:
         label: "BUILD FROM SOURCE CODE"
         link: "https://github.com/AutoSpotting/AutoSpotting"
