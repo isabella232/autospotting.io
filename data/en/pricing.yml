@@ -19,7 +19,7 @@ pricing:
     #     link: "https://bit.ly/AutoSpotting"
 
     # pricing table loop
-    - name: Rock Solid - stable and supported
+    - name: Stable and supported
       price: Up to 5% of savings
       unit: month
       services:
@@ -34,8 +34,8 @@ pricing:
         link: "https://aws.amazon.com/marketplace/pp/prodview-6uj4pruhgmun6"
 
     # pricing table loop
-    - name: May the Source be with you!
-      price: FREE
+    - name: Open Source Trunk
+      price: Free
       unit: ""
       services:
         - Code available on GitHub under the OSL-3 license

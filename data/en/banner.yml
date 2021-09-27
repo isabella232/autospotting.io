@@ -6,8 +6,8 @@ banner:
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "AutoSpotting"
   content : |
-    Saves 70-90% of AWS EC2 costs by replacing
-    on-demand instances in ASGs with spot clones.
+    Saves 60-90% of AWS EC2 costs by replacing
+    on-demand instances in ASGs with Spot clones.
     Deploys in minutes at any scale with minimal configuration changes.
     Early ELB draining & fallback to on-demand on spot terminations.
     Small cost overhead. Runs within each AWS account. No SaaS backend.

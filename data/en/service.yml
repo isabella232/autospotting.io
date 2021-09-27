@@ -3,60 +3,43 @@ service:
   enable: true
   title: Main Features
   service_item:
-    - name: "Safe for Production"
-      icon: "ti-layout"
+    - name: "Production-Grade"
+      icon: "ti-medall"
       content: |
         - Automated fail-over to on-demand within each AutoScaling Group
-        - Mature (4+ years old), production-grade software (>80% unit test coverage), used at hundreds of companies of all shapes and sizes
-        - Simple in operation, essentially just replaces EC2 instances with spot clones
-        - Best effort, keeps infrastructure as-is in case of most failures
+        - Mature, production-grade software used at hundreds of companies and institutions.
         - Configurable to keep some amount of on-demand instances in each ASG
-        - Automated traffic draining for instances behind ELBs
-        - Supports termination lifecycle hooks
-        - Can be enabled/suspended on a schedule
+        - Traffic draining for instances behind load balancers
 
     - name: "Minimal Friction"
-      icon: "ti-world"
+      icon: "ti-bolt"
       content: |
-        - Installs in minutes using CloudFormation, Terraform or even as Docker container
+        - Installs in minutes using CloudFormation or Terraform
         - Requires minimal infrastructure changes, just tag your existing long-running AutoScaling
-          groups(ASGs) and it will gradually swap their instances with much cheaper identically configured Spot clones
-        - Configuration overrides per ASG basis using additional tags offering flexibility
-        - Can be mass-deployed on entire AWS Organizations using CloudFormation StackSets
-        - Within an account can be configured to opt-out mode to adopt it on all but few disabled ASGs
-        - Fully Automated bid price calculation and instance type selection
+          groups(ASGs) with the key "spot-enabled" set to "true"
+        - Can be deployed on entire AWS Organizations using CloudFormation StackSets
 
     - name: "Supported"
-      icon: "ti-blackboard"
+      icon: "ti-headphone-alt"
       content: |
-        - Easy to install, stable, tested and supported binaries are available from the AWS Marketplace for less than 5% of the generated savings
-        - Setup help and long-term support are covered
-        - Vibrant Open Source community if you opt not to use the recommended support plan
-
+        - Easy to install, stable, tested and supported binaries are available from the AWS Marketplace
+        - Setup help and long-term support are included, just reach out at contact@cloudutil.io if you need any help
     - name: "Secure"
-      icon: "ti-palette"
+      icon: "ti-lock"
       content: |
-        - Fully contained within your AWS account, without any cross-account IAM setup
-        - Minimal set of IAM permissions, only those required for its operation
-        - Auditable (open source)
+        - Fully hosted within your AWS account
+        - Minimalist set of IAM permissions
+        - Auditable, open source code
 
     - name: "Compatible"
-      icon: "ti-package"
+      icon: "ti-plug"
       content: |
-        - Out of the box support for most AWS services backed by AutoScaling groups, including but not limited to ECS, Kubernetes, Beanstalk
+        - Out of the box support for anything backed by AutoScaling groups, including managed AWS services such as ECS, EKS and Beanstalk
         - Easy to automate(suspend/resume) from CI/CD scripts
 
     - name: "Low cost overhead"
-      icon: "ti-pulse"
+      icon: "ti-money"
       content: |
+        - Charges less than 5% of the generated savings through the AWS bill
         - Negligible runtime costs (serverless)
-        - Open Source code base
-        - Convenient binaries that cost less than 5% of the generated savings are available on the AWS Marketplace.
         - No vendor lock-in, just uninstall it and your groups will eventually revert to fully on-demand.
-
-    - name: "Simple by design"
-      icon: "ti-pulse"
-      content: |
-        - Minimalist serverless implementation, it's essentially just a Lambda function.
-        - Easy to troubleshoot in case of failures
-        - There are no dashboards, admin panels or other gimmicks: use native AWS tools for cost tracking and administration: mainly Billing Console, CloudFormation

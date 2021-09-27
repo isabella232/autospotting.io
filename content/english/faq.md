@@ -108,11 +108,7 @@ You can launch it using the provided CloudFormation stack. It should be doable
 within a couple of minutes and just needs a few clicks in the AWS console or a
 single execution of awscli from the command-line. The same CloudFormation stack
 template can also be used for launching a StackSet against your entire AWS
-organication.
-
-Alternatively, there is also a community-supported Terraform stack which works
-similarly, a Docker container image you can run anywhere, and even configuration
-on how to run it on Kubernetes as a cronjob.
+organization.
 
 You can see the Getting Started
 [documentation](https://github.com/AutoSpotting/AutoSpotting/blob/master/START.md)
