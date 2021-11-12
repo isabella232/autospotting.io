@@ -23,7 +23,7 @@ service:
       icon: "ti-headphone-alt"
       content: |
         - Easy to install, stable, tested and supported binaries are available from the AWS Marketplace
-        - Setup help and long-term support are included, just reach out at contact@cloudutil.io if you need any help
+        - Setup help and long-term support are included, feel free to reach out if you need any help
     - name: "Secure"
       icon: "ti-lock"
       content: |

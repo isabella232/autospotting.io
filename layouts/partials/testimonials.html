@@ -3,6 +3,7 @@
 {{ if $data.testimonials.testimonials.enable }}
 {{ with $data.testimonials.testimonials }}
 {{"<!-- Start Our Team -->" | safeHTML}}
+
 <section id="reviews" class="section">
   <div class="container">
     <div class="row justify-content-center">
@@ -15,7 +16,10 @@
         </div>
       </div>
       {{"<!-- /section title -->" | safeHTML}}
-
+<p>
+If you're a happy AutoSpotting user and would like your testimonial to be shown
+	here, just click <a href="http://testimonial.to/cloudutil-io">here</a>, it only takes a couple of minutes, and I'd really appreciate it.
+</p>
       {{ range .team_member}}
       {{"<!-- team member -->" | safeHTML}}
       <div class="col-lg-4 col-md-6 col-12 wow fadeInDown member" data-wow-duration="500ms">
@@ -25,11 +29,11 @@
             <img class="img-fluid lozad member_avatar" data-src="{{ .avatar_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .avatar | absURL }}'" alt="{{ .name }}">
 
             {{"<!-- member social profile -->" | safeHTML}}
-            <div class="mask">
+            {{/* <div class="mask">
               <ul class="list-inline">
 
               </ul>
-            </div>
+            </div> */}}
           </div>
 
           {{"<!-- member name & position -->" | safeHTML}}

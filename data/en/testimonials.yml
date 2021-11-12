@@ -10,6 +10,18 @@ testimonials:
       avatar: "images/testimonials/jan-curn.jpg"
       avatar_webp: "images/testimonials/webp/jan-curn.webp"
     
+    - review: "I think AutoSpotting has by far the best approach to utilizing spot instances that I've seen. With AutoSpotting we're pretty much able to run our whole stateless production workload on spot instances."
+      name: "Andreas Sundström"
+      position: "DevOps & Development Director, OhMy"
+      avatar: "images/testimonials/andreas.jpg"
+      avatar_webp: "images/testimonials/webp/andreas.webp"
+      
+    - review: "Got spot Instances launched - launching r4.large at the price of t2.large :-)"
+      name: "Sandeep Shantharam"
+      position: "Software Engineer"
+      avatar: "images/testimonials/person-5.png"
+      avatar_webp: "images/testimonials/webp/person-5.webp"
+
     - review: "Just deployed my first installation of the AutoSpotting tool… It took only 3 minutes and 5 clicks and now I’m saving 60% of my EC2 cost with Spot instances automagically. Kudos Sir!"
       name: "Falko Zurell"
       position: "Head of Platform Operations, HERE"
@@ -28,15 +40,11 @@ testimonials:
       avatar: "images/testimonials/levi.jpg"
       avatar_webp: "images/testimonials/webp/levi.webp"
     
-    - review: "We’re making use of an awesome little open source tool called autospotting. In a nutshell, it will automatically replace an on-demand instance in our ASG’s when a cheaper spot instance is available."
-      name: "Eric Holmes"
-      position: "Software Engineer, Remind"
-      avatar: "images/testimonials/person-2.png"
-      avatar_webp: "images/testimonials/webp/person-2.webp"
+    # - review: "We’re making use of an awesome little open source tool called autospotting. In a nutshell, it will automatically replace an on-demand instance in our ASG’s when a cheaper spot instance is available."
+    #   name: "Eric Holmes"
+    #   position: "Software Engineer, Remind"
+    #   avatar: "images/testimonials/person-2.png"
+    #   avatar_webp: "images/testimonials/webp/person-2.webp"
     
-    - review: "Got spot Instances launched - launching r4.large at the price of t2.large :-)"
-      name: "Sandeep Shantharam"
-      position: "Software Engineer"
-      avatar: "images/testimonials/person-5.png"
-      avatar_webp: "images/testimonials/webp/person-5.webp"
+    
     

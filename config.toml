@@ -53,6 +53,11 @@ weight = 1
 # weight = 2
 
 [[menu.main]]
+name = "Testimonials"
+URL = "reviews"
+weight = 2
+
+[[menu.main]]
 name = "Users"
 URL = "clients"
 weight = 3
@@ -62,26 +67,23 @@ name = "Pricing"
 URL = "pricing"
 weight = 4
 
-[[menu.main]]
-name = "Testimonials"
-URL = "reviews"
-weight = 5
 
-[[menu.main]]
-name = "Blog"
-URL = "blog"
-weight = 6
+
+# [[menu.main]]
+# name = "Blog"
+# URL = "blog"
+# weight = 6
 
 [[menu.main]]
 name = "Contact"
 URL = "contact"
 weight = 7
 
-[[menu.main]]
-name = "FAQ"
-identifier = "faq"
-url  = "contact"
-weight = 8
+# [[menu.main]]
+# name = "FAQ"
+# identifier = "faq"
+# url  = "contact"
+# weight = 8
 
 #### external / static link ####
 # [[menu.static]]

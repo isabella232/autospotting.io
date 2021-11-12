@@ -95,3 +95,9 @@ clients:
       # image_webp: images/clients/webp/huggy.webp
       categories: ["startup"]
       link: https://huggy.io
+
+    - name: OhMy
+      image: images/clients/ohmy.png
+      # image_webp: images/clients/webp/ohmhy.webp
+      categories: ["startup"]
+      link: https://ohmy.co

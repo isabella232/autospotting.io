@@ -4,9 +4,10 @@ contact:
   title : Contact Us
   subtitle : We are here to help you
   content : |
-    Are you curious about something notanswered in our [FAQ](https://autospotting.io/faq.html),or do you need help with AutoSpotting?
+    Are you curious about something not yet answered in our [FAQ](https://autospotting.io/faq.html),
+    or do you need help with AutoSpotting?
 
-    Please feel free to contact us on [Gitter](https://gitter.im/cristim/autospotting).
+    Please feel free to contact us on [Slack](https://join.slack.com/t/cloudutil/shared_invite/zt-xodcoi9j-1IcxNozXx1OW0gh_N08sjg).
 
   form_action: "#" #contact form works with https://formspree.io
 
